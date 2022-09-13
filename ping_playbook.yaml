@@ -1,0 +1,9 @@
+- name: Ping dynamic inventory
+  hosts: ubuntu
+
+  tasks:
+    - name: ping dynamic inventory
+      ping:
+      register: result
+    - debug:
+        msg: "{{ result.stdout }}"
